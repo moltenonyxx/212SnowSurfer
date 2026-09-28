@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FinishLIne : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
@@ -8,7 +8,7 @@ public class FinishLIne : MonoBehaviour
 
         if (collision.gameObject.layer == layerIndex)
         {
-            Debug.Log("u won");
+            SceneManager.LoadScene(0);
         }
     }
 
